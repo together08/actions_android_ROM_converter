@@ -1,1 +1,31 @@
+name: Android_ROM_convert
 
+on:
+#  release:
+#    types: [published]
+#  push:
+#    branches:
+#      - master
+#    paths:
+#      - '.config'
+#  schedule:
+#    - cron: 0 8 * * 5
+  watch:
+    types: [started]
+
+env:
+  status: dat  #状态，请填写刷机包内system的状态，如：dat（system.new.dat或者system.new.dat.br状态）；
+  REPO_BRANCH: dev-19.0
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout
+        uses: actions/checkout@v2.1.0
+      
+      - name: Initialization environment
+
+
+        
+         
